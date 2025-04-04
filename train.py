@@ -1,3 +1,7 @@
+# Define loss and optimizer
+loss_fn = nn.CrossEntropyLoss()
+optimizer = torch.optim.Adam(model_0.parameters(), lr=1e-3)
+
 def train(model, optimizer, dataloader, loss_fn):
     model.train()
     running_loss = 0.0
@@ -23,4 +27,3 @@ def train(model, optimizer, dataloader, loss_fn):
     train_loss = running_loss / len(dataloader)
     train_accuracy = 100. * correct / total
     pass
-print('File eseguito')
